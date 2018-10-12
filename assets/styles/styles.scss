@@ -1,0 +1,209 @@
+$main-font-color: #ffffff;
+
+
+
+/* Some common styles*/
+
+a {
+    text-decoration: none;
+    color: $main-font-color;
+
+    &:hover {
+        text-decoration: none;
+        color: $main-font-color;
+    }
+}
+
+
+html {
+    font-size: 100%;
+}
+
+
+body {
+    background-color: #091619;
+    color: $main-font-color;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 1278px;
+    margin: 0 auto;
+}
+
+.primary-button {
+    border-radius: 50px;
+    background-color: #43c6b3;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 11px;
+    width: 100%;
+    max-width: 140px;
+    
+}
+
+
+
+
+
+
+
+
+/* Header styles*/
+
+#header {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    margin: auto;
+
+    .content-wrapper {
+        position: relative;
+    }
+
+    .navbar-nav {
+        font-weight: bold;
+        font-size: 9px;
+        letter-spacing: -0.4px;
+
+
+        .social-icon-container {
+            margin-left: 18px;
+        }
+
+
+        a {
+            opacity: 0.3;
+
+            .fa-facebook {
+                font-size: 12px;
+
+            }
+
+            .fa-instagram {
+                font-size: 12px;
+            }
+
+            &.social-icon {
+                color: $main-font-color;
+                opacity: 1;
+            }
+
+            &:hover {
+                color: #ffffff;
+                opacity: 1;
+            }
+        }
+        .active {
+            opacity: 1;
+        }
+    }
+
+
+}
+
+/*Hero-section styles*/
+
+#hero-section {
+    width: 100%;
+    margin: 0 auto;
+
+    .text-container {
+        width: 100%;
+        max-width: 768px;
+        position: absolute;
+        top: 380px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-flow: column nowrap;
+        z-index: 1;
+        padding: 0 20px;
+
+         p {
+            font-size: 1.1875rem;
+            width: 100%;
+            max-width: 108px;
+            letter-spacing: -0.5px;
+        }
+
+        h1 {
+            font-family: Arial;
+            font-size: 5.28125rem;
+            font-weight: 900;
+            letter-spacing: -2.2px;
+            width: 100%;
+        }
+
+        .primary-button  {
+            margin: auto;
+            margin-top: 67px;
+        }
+    }
+
+    .image-container {
+        background: url(../images/group-5.png) no-repeat center center;
+        background-size: contain;
+        width: 100%;
+        margin: 0 auto;
+        mix-blend-mode: lighten;
+        max-width: 471px;
+        min-height: 730px;
+        position: relative;
+
+        .fa-angle-double-down {
+            position: absolute;
+            right: 50%;
+            font-size: 25px;
+            bottom: 0;
+        }
+
+    }
+}
+
+
+
+/* Media queries */
+
+// @media (min-width: 1200px) { ... }
+
+// @media all and (max-width: 1199.98px) { ... }
+
+
+// @media all and (max-width: 991.98px) { ... }
+
+
+@media all and (max-width: 767.98px) { 
+    html {
+        font-size: 80%;
+    }
+
+    #hero-section {
+
+        .text-container {
+
+            text-align: center;
+
+            p {
+                max-width: none;
+            }
+        }
+    }
+    
+ }
+
+@media all and (max-width: 575.98px) { 
+    html {
+        font-size: 65%;
+    }
+ }
+
+
+
+
+
+
+
+
