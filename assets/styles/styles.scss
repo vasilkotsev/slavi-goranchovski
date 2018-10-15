@@ -1,5 +1,5 @@
 $main-font-color: #ffffff;
-
+$third-color: #43c6b3;
 
 
 /* Some common styles*/
@@ -35,7 +35,7 @@ body {
 
 .primary-button {
     border-radius: 50px;
-    background-color: #43c6b3;
+    background-color: $third-color;
     padding: 10px 20px;
     font-weight: bold;
     font-size: 11px;
@@ -44,8 +44,30 @@ body {
     
 }
 
+h2 {
+    font-size: 6.25rem;
+    line-height: 0.8;
+    opacity: 0.1;
+    font-weight: 900;
+    letter-spacing: -2.6px;
+    color: #7c7c7c;
+    position: absolute;
+}
 
 
+h3 {
+    font-size: 1.46875rem;
+    line-height: 1.04;
+    letter-spacing: -0.6px;
+    font-weight: 900;
+}
+
+h4 {
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -0.3px;
+}
 
 
 
@@ -103,6 +125,9 @@ body {
 
 
 }
+
+/* Main-section styles*/
+
 
 /*Hero-section styles*/
 
@@ -163,6 +188,97 @@ body {
     }
 }
 
+/* Section About styles */
+
+#about {
+    padding-top: 177px;
+
+    .container {
+        position: relative;
+    }
+    .image-container     { 
+        background: url(../images/romb-2.png) no-repeat center center;
+        background-size: auto auto;
+        background-size: auto auto;
+        background-size: cover;
+        width: 100%;
+        margin: 0 auto;
+        // max-width: 354px;
+        min-height: 394px;
+        position: absolute;
+        right: -52%;
+        bottom: -37%;
+        z-index: -1;
+    }
+    h2 {
+        bottom: -4%;
+        right: 16%;
+        width: 100%;
+    }
+
+    h3 {
+        padding: 0 20px 53px;
+    }
+
+    .content-wrapper {
+        max-width: 556px;
+    }
+
+    .slogan-container {
+        position: relative;
+        .slogan {
+            font-size: 11px;
+            line-height: 1.48;
+            letter-spacing: -0.2px;
+            margin: 5px 0 30px 40px;
+        }
+    }
+
+    .inner-container {
+        
+        div.col-md-4:first-of-type {
+            .box-item:before {
+                display: none;
+            }
+        }
+
+        div:nth-child(4n), div:nth-child(7n), div:nth-child(10n), div:nth-child(13) {
+            .box-item:before {
+                display: none;
+            }
+        }
+        .box-item {
+            border-radius: 3px;
+            box-shadow: 0 1px 32px 0 rgba(0, 0, 0, 0.15);
+            background-color: #151f22;
+            padding: 31px 20px;
+            min-height: 154px;
+            margin-top: 8px;
+            position: relative;
+
+            &:before {
+                content:'';
+                position: absolute;
+                background-color: $third-color;
+                width: 21px;
+                height: 3px; 
+                border-radius: 39px;
+                top: 15%;
+                left: -15px;
+            }
+
+            p {
+                opacity: 0.3;
+                font-size: 7px;
+                line-height: 1.43;
+                letter-spacing: -0.1px;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+
 
 
 /* Media queries */
@@ -172,10 +288,20 @@ body {
 // @media all and (max-width: 1199.98px) { ... }
 
 
-// @media all and (max-width: 991.98px) { ... }
+@media all and (max-width: 991.98px) { 
+    
+    #about {
+
+        .image-container {
+            position: static;
+            background-size: contain;
+        }
+    }
+}
 
 
 @media all and (max-width: 767.98px) { 
+
     html {
         font-size: 80%;
     }
@@ -183,12 +309,22 @@ body {
     #hero-section {
 
         .text-container {
-
             text-align: center;
 
             p {
                 max-width: none;
             }
+        }
+    }
+
+    #about {
+
+        h2 {
+            right: 0;
+        }
+
+        .box-item:before {
+            display: none;
         }
     }
     
