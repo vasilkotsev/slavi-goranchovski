@@ -458,10 +458,73 @@ h4 {
   font-size: 7px;
   font-weight: bold;
   letter-spacing: -0.2px;
+  padding: 20px;
 }
 
 #blog .see-more .articles .fa-arrow-right {
   margin-left: 3px;
+}
+
+/* Social section styles */
+#social {
+  padding: 64px 0 94px;
+}
+
+#social .content-wrapper {
+  max-width: 600px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#social .box {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 30px;
+}
+
+#social .box .box-item-logo .facebook {
+  width: 53px;
+  height: 60.5px;
+}
+
+#social .box .box-item-logo .instagram {
+  width: 56px;
+  height: 62px;
+}
+
+#social .box .box-item-text {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 8px 10px;
+}
+
+#social .box .box-item-text .follow {
+  opacity: 0.3;
+  font-size: 7px;
+  line-height: 2;
+  letter-spacing: -0.2px;
+  color: #ffffff;
+}
+
+#social .box .box-item-text .social-media {
+  font-size: 11px;
+  line-height: 1.18;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+
+#social .box .box-item-text .goranchovski {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 0.87;
+  letter-spacing: -0.4px;
+  color: #43c6b3;
+  padding-top: 9px;
+}
+
+#social .box .box-item-text span {
+  display: inline-block;
 }
 
 /* Media queries */
@@ -503,12 +566,15 @@ h4 {
   #blog h2 {
     top: -29%;
   }
+  #blog .see-more {
+    text-align: center;
+  }
   #blog .content-container .box + .box {
     margin-top: 30px;
     margin-left: 0px;
   }
-  #blog .content-container .box .oval {
-    display: none;
+  #social .content-wrapper {
+    padding: 0 20px;
   }
 }
 
