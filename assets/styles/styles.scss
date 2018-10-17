@@ -621,6 +621,45 @@ h4 {
     }
 }
 
+/* Footer styles */
+
+
+#footer {
+    .content-wrapper {
+        max-width: 600px;
+        border-top: 0.5px solid #363636;
+        padding: 20px 0;
+
+
+
+    }
+
+    p {
+        opacity: 0.4;
+        font-family: Roboto;
+        font-size: 6px;
+        letter-spacing: 0px;
+        color: #ffffff;
+    }
+
+    li {
+
+        .social-icon {
+                padding: 5px;
+            }
+
+        & + li {
+            margin-left: 5px;
+
+            
+        }
+    }
+
+    .designed {
+        padding-top: 3px;
+    }
+}
+
 
 
 /* Media queries */
@@ -631,6 +670,14 @@ h4 {
 
 
 @media all and (max-width: 991.98px) { 
+
+    #header {
+        
+        .navbar {
+            z-index: 1;
+            text-align: center;
+        }
+    }
     
     #about {
 
@@ -719,6 +766,13 @@ h4 {
     #social {
         .content-wrapper {
             padding: 0 20px;
+        }
+    }
+
+    #footer {
+        .content-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
     
